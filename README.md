@@ -9,6 +9,9 @@ https://github.com/zhaozhijie1997/TensorFlow-Object-Detection-API-Tutorial-Train
 4. python3 generate_tfrecord.py --csv_input=images/test_labels.csv --image_dir=images/test --output_path=test.record
  Edit labelmap accordingly
 5. python3 model_main.py --pipeline_config_path=training/ssd_inception_v2_coco.config --model_dir=images  --alsologtostderr
-6. python3 export_inference_graph.py --input_type image_tensor --pipeline_config_path training/ssd_inception_v2_coco.config --trained_checkpoint_prefix training/model.ckpt-XXXX --output_directory inference_graph
+6. Replace the export_inference_graph.py with the one in this repo.
+   Replace the ssd_meta_arch.py in meta_archit folder with the one in this repo.
+
+7. python3 export_inference_graph.py --input_type image_tensor --pipeline_config_path training/ssd_inception_v2_coco.config --trained_checkpoint_prefix training/model.ckpt-XXXX --output_directory inference_graph
 
 
